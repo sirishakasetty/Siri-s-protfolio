@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Siri Kasetty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, #1c1c1c, #333);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        section {
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #444;
+        }
+        .about, .skills, .experience, .projects, .contact {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #f39c12;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .skills-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .skills-icons .skill {
+            margin: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .skills-icons .skill:hover {
+            transform: scale(1.1);
+            color: #f39c12;
+        }
+        .skills-icons i {
+            font-size: 3rem;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #f39c12;
+        }
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: "\25CF";
+            position: absolute;
+            left: -0.8rem;
+            color: #f39c12;
+            font-size: 1.5rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .project-card h3 {
+            color: #f39c12;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1c1c1c;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            background: #333;
+            color: #fff;
+        }
+        .contact-form button {
+            background: #f39c12;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Siri Kasetty</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Siri Kasetty, a data scientist with 3 years of experience empowering Fortune 500 companies through data-driven decision-making. I specialize in machine learning, data analysis, and visualization, and I'm passionate about solving complex business challenges.</p>
+        <p>📍 Location: Connecticut, USA</p>
+        <p>📧 Email: <a href="mailto:sirisha.astatine85@gmail.com">sirisha.astatine85@gmail.com</a></p>
+        <p>📞 Phone: +1 (203) 676-8085</p>
+        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/sirisha-kasetty" target="_blank">LinkedIn Profile</a></p>
+        <p>🔗 GitHub: <a href="https://github.com/sirishakasetty" target="_blank">GitHub Profile</a></p>
+        <button onclick="window.open('path-to-resume.pdf')">Download Resume</button>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-icons">
+            <div class="skill">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-chart-bar"></i>
+                <p>Data Visualization</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-brain"></i>
+                <p>Machine Learning</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-cloud"></i>
+                <p>GCP & AWS</p>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Data Analyst - HCL Technologies (Dec 2020 - Apr 2023)</h3>
+                <p>Developed a BERT-based topic model for analyzing unstructured data, achieving a 6% increase in win rate.</p>
+                <p>Automated renewal PDFs using Python and SQL, saving 80 hours/month.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Intern - HCL Technologies (May 2020 - Nov 2020)</h3>
+                <p>Reduced data inconsistency by 18% through healthcare data system integration.</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Sales Analysis & Visualization (Power BI)</h3>
+                <p>Created a dynamic sales dashboard that revealed a $6.96M growth (+30.86%).</p>
+                <button onclick="window.open('path-to-powerbi-demo')">View Demo</button>
+            </div>
+            <div class="project-card">
+                <h3>Supply Chain Data Integration</h3>
+                <p>Managed integration of supply chain data, improving forecast accuracy by 10%.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Siri Kasetty. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
